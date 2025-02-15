@@ -6,4 +6,16 @@ public class Patient {
         _id = id;
         _caffeine = caffeine;
     }
+
+    public int getID() {
+        return _id;
+    }
+
+    public double getCaffeine() {
+        return _caffeine;
+    }
+
+    public void absorbCaffeine(double amount) {
+        _caffeine -= amount;
+    }
 }
