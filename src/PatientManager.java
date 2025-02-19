@@ -6,6 +6,13 @@ public class PatientManager {
 
     public PatientManager() {
         _patients = new ArrayList<>(); // default is 10 items
+        for (int i = 0; i < 10; i++) {
+            _patients.add(null);
+        }
+    }
+
+    public ArrayList<Patient> getPatients() {
+        return _patients;
     }
 
     public int addPatient(Patient patient) {
@@ -43,7 +50,7 @@ public class PatientManager {
             }
         }
         if (isEmpty) {
-            return "Empty";
+            return "Empty\n";
         }
         String outStr = "";
         for (int i = 0; i < _patients.size(); i++) {
